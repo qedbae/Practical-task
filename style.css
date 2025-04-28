@@ -235,6 +235,10 @@ body {
     margin-bottom: 24px;
 }
 
+.slide-menu::-webkit-scrollbar {
+    height: 0;
+}
+
 .slide-menu__list {
     margin: 0;
     list-style: none;
@@ -254,18 +258,20 @@ body {
     }
 }
 
-.slide-menu__item {
+.slide-menu__item a {
+    display: inline-block;
     padding: 8px 16px;
     border: 2px solid transparent;
     border-radius: 6px;
     font-size: 16px;
     font-weight: 500;
+    text-decoration: none;
     color: #7E7E82;
     cursor: pointer;
 }
 
-.slide-menu__item:hover {
-    border-color: #B8FFEC
+.slide-menu__item a:hover {
+    border-color: #B8FFEC;
 }
 
 .text-mobile {
