@@ -1,0 +1,217 @@
+html {
+    box-sizing: border-box;
+}
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('./fonts/TTLakes-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('./fonts/TTLakes-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('./fonts/TTLakes-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+body {
+    font-family: 'TT Lakes';
+    color: #1B1C21;
+}
+
+.side-panel {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 100vh;
+    background-color: #ffffff;
+    z-index: 10;
+    box-shadow: 16px 0px 52px rgba(69,79,126,0.2);
+}
+
+.side-panel__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 18px 0;
+    margin-bottom: 40px;
+}
+
+.side-panel__header-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-left: 24px;
+}
+
+.side-panel__header-right {
+    display: flex;
+    align-items: center;
+    padding-right: 24px;
+}
+
+.side-panel__header-button,
+.side-panel__footer-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #FF3E79;
+    border: none;
+    transition: opacity 0.5s ease;
+}
+
+.side-panel__header-button:hover,
+.side-panel__footer-button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.side-panel__button--close {
+    background-image: url("images/icon-close.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.side-panel__logo {
+    width: 97px;
+    height: 51px;
+  }
+
+.side-panel__button--search {
+    background-image: url("images/icon-search-bold.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.side-panel__menu {
+    flex-grow: 1;
+}
+
+.side-panel__menu-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.side-panel__menu-item {
+    position: relative;
+}
+
+.side-panel__menu-item a {
+    display: block;
+    padding: 4px 24px;
+    margin-bottom: 24px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+    transition: color 0.5s ease;
+}
+
+.side-panel__menu-item a:hover {
+    color: #7E7E82;
+}
+
+.side-panel__menu-item a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 32px;
+    background-color: #41F6D7;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    opacity: 0;
+}
+
+.side-panel__menu-item:hover a::before {
+    opacity: 1;
+}
+
+.side-panel__footer-buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 16px;
+    padding-left: 24px;
+    margin-bottom: 16px;
+}
+
+.side-panel__button--phone {
+    background-image: url("images/icon-phone.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.side-panel__button--chat {
+    background-image: url("images/icon-chat.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.side-panel__button--profile {
+    background-image: url("images/icon-profile.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.side-panel__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-left: 24px;
+    margin-bottom: 40px;
+}
+
+.side-panel__email {
+    font-weight: 500;
+    line-height: 24px;
+    text-decoration: none;
+    color: #1B1C21;
+}
+
+.side-panel__phone {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    text-decoration: none;
+    color: #1B1C21;
+}
+
+.side-panel__languages {
+    display: flex;
+    gap: 8px;
+    list-style: none;
+    padding-left: 24px;
+    margin: 0;
+    margin-bottom: 32px;
+}
+
+.side-panel__language-link {
+    text-decoration: none;
+    font-weight: 500;
+    color: #1B1C21;
+    transition: opacity 0.5s ease;
+}
+
+.side-panel__language-link:hover {
+    opacity: 0.6;
+}
